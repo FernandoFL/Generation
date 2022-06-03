@@ -1,4 +1,4 @@
-package f20220524;
+package f20220525.f20220524;
 
 public class CalculoPromedio {
 

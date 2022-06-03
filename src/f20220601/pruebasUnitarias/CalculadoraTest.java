@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Objects;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CalculadoraTest {
 
@@ -17,6 +17,9 @@ public class CalculadoraTest {
 
     @Test
     public void resta() {
+        Calculadora cal=new Calculadora();
+        int res= cal.resta(2,2);
+        assertEquals(0,res);
     }
 
     @Test
@@ -28,9 +31,10 @@ public class CalculadoraTest {
     }
 
     @Test
-    public void numParImpar() {
+    public void validarPar() {
         Calculadora cal = new Calculadora();
-        String resultado = cal.numParImpar(1);
+
+        String resultado = cal.numParImpar(3);
         if (Objects.equals(resultado, "Es par")) {
             assertEquals("Es par",resultado);
             System.out.println(resultado);
@@ -38,5 +42,5 @@ public class CalculadoraTest {
             assertEquals("Es Impar",resultado);
             System.out.println(resultado);
         }
-    }
+    }                                               
 }
